@@ -1,0 +1,35 @@
+.button-search{
+	 -fx-background-image: url(../images/lupa.png); 
+	 -fx-background-color: transparent; 
+	 -fx-background-repeat: no-repeat;
+	 -fx-cursor: hand;
+}
+
+.button-prin{
+	-fx-background-color: none;
+	-fx-border-color: #4caf50;
+	-fx-border-style: solid;
+	-fx-border-radius: 5px;
+	-fx-border-width: 2px;
+	-fx-font-size: 12px;
+	-fx-cursor: hand;
+}
+
+.button-info{
+	-fx-background-image: url(../images/info.png);
+	-fx-background-color: transparent; 
+	-fx-background-repeat: no-repeat;
+	-fx-background-position: 50.0% 
+}
+
+#imgView{
+	-fx-image: url(../images/logo_ifsp_horizontal_transp.png);
+}
+
+#paneTop{
+	-fx-background-color: #40bb45;
+}
+
+.background{
+	-fx-background-color: white; 
+}
