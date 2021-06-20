@@ -2,8 +2,6 @@
 
 O IFCrypt foi desenvolvido como parte do Trabalho de Conclusão de Curso (TCC) do curso de Tecnologia em Analise e Desenvolvimento de Sistemas do Instituo Federal de São Paulo (IFSP) – Campus Campinas, para a obtenção do título de Tecnólogo em Analise e Desenvolvimento de Sistemas.
 
-![telaHome](https://user-images.githubusercontent.com/48109661/122684347-4aecad80-d1db-11eb-90ea-fa43509c96dd.jpg)
-
 O IFCrypt é uma ferramenta para criptografar e descriptografar arquivos em formato PDF utilizando o processo de envelopamento digital, além de gerar uma assinatura digital para o documento.
 
 O IFCrypt funciona da seguinte forma: o usuário ao iniciar a aplicação precisa gerar um par de chaves RSA caso ainda não possua, em seguida ele seleciona a função de criptografar que recebe um arquivo como entrada que é cifrado com uma chave simétrica, que por sua vez, é cifrada com a chave pública do destinatário.
