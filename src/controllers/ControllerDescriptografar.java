@@ -35,6 +35,7 @@ public class ControllerDescriptografar implements Initializable {
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
+		
 		arquivo = new SelecaoArquivo();
 		mensagem = new MensagemAoUsuario();
 		
@@ -43,18 +44,21 @@ public class ControllerDescriptografar implements Initializable {
 
 	@FXML
 	protected void escolherArquivo() {
+		
 		docCriptografado = arquivo.selecionarArquivoCifrado();
 		txtArquivoDecript.setText((docCriptografado == null) ? "" : docCriptografado.getAbsolutePath());
 	}
 	
 	@FXML
 	protected void escolherChavePublica() {
+		
 		docChavePubRemetente = arquivo.selecionarChavePub();
 		txtChavePubDecript.setText((docChavePubRemetente == null) ? "" : docChavePubRemetente.getAbsolutePath());
 	}
 
 	@FXML
 	protected void escolherChavePrivada() {
+		
 		docChavePrivDestino = arquivo.selecionarChavePriv();
 		txtChavePrivDecript.setText((docChavePrivDestino == null) ? "" : docChavePrivDestino.getAbsolutePath());
 	}
@@ -91,7 +95,7 @@ public class ControllerDescriptografar implements Initializable {
 				ex.printStackTrace();
 			}
 			
-			if(assinaturaValida) {
+			if (assinaturaValida) {
 				localSalvarDocDescriptografado = arquivo.selecionarLocalSalvarArquivoDecifrado();
 				
 				if (localSalvarDocDescriptografado == null) {
