@@ -1,7 +1,8 @@
 # IFCrypt: Uma Solução para Criptografia de Documentos em Java
 
 O IFCrypt foi desenvolvido como parte do Trabalho de Conclusão de Curso (TCC) do curso de Tecnologia em Analise e Desenvolvimento de Sistemas do Instituo Federal de São Paulo (IFSP) – Campus Campinas, para a obtenção do título de Tecnólogo em Analise e Desenvolvimento de Sistemas.
-![telaHome_auto_x2](https://user-images.githubusercontent.com/48109661/122684061-b9307080-d1d9-11eb-9d5a-9f9532aa2d92.jpg)
+
+![telaHome](https://user-images.githubusercontent.com/48109661/122684347-4aecad80-d1db-11eb-90ea-fa43509c96dd.jpg)
 
 O IFCrypt é uma ferramenta para criptografar e descriptografar arquivos em formato PDF utilizando o processo de envelopamento digital, além de gerar uma assinatura digital para o documento.
 
