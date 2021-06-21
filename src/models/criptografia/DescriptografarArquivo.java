@@ -124,7 +124,7 @@ public class DescriptografarArquivo {
 		byte[] conteudoArquivoComChave = manArquivo.arquivoParaByte(arquivoComChave);
 		byte[] chaveSessaoCifrada = new byte[tamLeituraChaveAES];
 		
-		for(int i = 0; i < tamLeituraChaveAES; i++) {
+		for (int i = 0; i < tamLeituraChaveAES; i++) {
 			chaveSessaoCifrada[i] = conteudoArquivoComChave[i];
 		}
 		
@@ -139,7 +139,7 @@ public class DescriptografarArquivo {
 		byte[] conteudoCifradoArquivo = new byte[(int) arquivo.length() - tamLeituraChaveAES];
 		int j = 0;
 		
-		for(int i = tamLeituraChaveAES; i < arquivo.length(); i++) {
+		for (int i = tamLeituraChaveAES; i < arquivo.length(); i++) {
 			conteudoCifradoArquivo[j] = conteudoArquivoComChave[i];
 			j++;
 		}

@@ -22,6 +22,7 @@ public class AssinaturaDigital {
 	private int tamAssinaturaArq = ValoresFixos.TAM_LEITURA_ASSINATURA.getValor();
 
 	public AssinaturaDigital() throws NoSuchAlgorithmException {
+		
 		assinatura = Signature.getInstance("SHA256withRSA");
 		manArquivo = new ManipulacaoArquivo();
 	}
