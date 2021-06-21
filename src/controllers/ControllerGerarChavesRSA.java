@@ -31,6 +31,7 @@ public class ControllerGerarChavesRSA implements Initializable {
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
+		
 		arquivo = new SelecaoArquivo();
 		mensagem = new MensagemAoUsuario();
 		
@@ -40,12 +41,14 @@ public class ControllerGerarChavesRSA implements Initializable {
 
 	@FXML
 	protected void escolherLocalSalvarChavePub() {
+		
 		dirSalvarChavePubRSA = arquivo.selecionarLocalSalvarChavePubRSA();
 		txtLocalSalvarChavePubRSA.setText((dirSalvarChavePubRSA == null) ? "" : dirSalvarChavePubRSA.getAbsolutePath());
 	}
 
 	@FXML
 	protected void escolherLocalSalvarChavePriv() {
+		
 		dirSalvarChavePrivRSA = arquivo.selecionarLocalSalvarChavePrivRSA();
 		txtLocalSalvarChavePrivRSA.setText((dirSalvarChavePrivRSA == null) ? "" : dirSalvarChavePrivRSA.getAbsolutePath());
 	}

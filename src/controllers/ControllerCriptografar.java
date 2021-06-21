@@ -37,6 +37,7 @@ public class ControllerCriptografar implements Initializable {
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
+		
 		arquivo = new SelecaoArquivo();
 		mensagem = new MensagemAoUsuario();
 		
@@ -45,18 +46,21 @@ public class ControllerCriptografar implements Initializable {
 
 	@FXML
 	protected void escolherArquivo() {
+		
 		docEscolhido = arquivo.selecionarArquivoPDF();
 		txtArquivoCript.setText((docEscolhido == null) ? "" : docEscolhido.getAbsolutePath());
 	}
 
 	@FXML
 	protected void escolherChavePublica() {
+		
 		docChavePubDestino = arquivo.selecionarChavePub();
 		txtChavePubCript.setText((docChavePubDestino == null) ? "" : docChavePubDestino.getAbsolutePath());
 	}
 
 	@FXML
 	protected void escolherChavePrivada() {
+		
 		docChavePrivRemetente = arquivo.selecionarChavePriv();
 		txtChavePrivCript.setText((docChavePrivRemetente == null) ? "" : docChavePrivRemetente.getAbsolutePath());
 	}
@@ -76,7 +80,6 @@ public class ControllerCriptografar implements Initializable {
 			localSalvarDocCriptografado = arquivo.selecionarLocalSalvarArquivoCifrado();
 			
 			if (localSalvarDocCriptografado == null) {
-				mensagem.mensagemAlerta();
 				btnCriptDoc.setDisable(false);
 			}
 

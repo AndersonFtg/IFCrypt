@@ -99,7 +99,6 @@ public class ControllerDescriptografar implements Initializable {
 				localSalvarDocDescriptografado = arquivo.selecionarLocalSalvarArquivoDecifrado();
 				
 				if (localSalvarDocDescriptografado == null) {
-					mensagem.mensagemAlerta();
 					btnDecriptDoc.setDisable(false);
 				}
 		
