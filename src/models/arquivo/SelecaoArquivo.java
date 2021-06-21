@@ -11,16 +11,27 @@ public class SelecaoArquivo {
 
 	private File arquivoPDFSelecionado, arquivoCifrado, arquivoChavePub, arquivoChavePriv;
 	private File arquivoSalvarDocCifrado, arquivoSalvarDocDecifrado, arquivoSalvarChavePub, arquivoSalvarChavePriv;
-	private Window window = null;
+	private Window window;
 	private FileChooser fileChooserSelArquivo, fileChooserSaveArquivo;
-	private MensagemAoUsuario mensagem = new MensagemAoUsuario();
-
+	private MensagemAoUsuario mensagem;
+	
+	public SelecaoArquivo() {
+		
+		window = null;
+		mensagem = new MensagemAoUsuario();
+	}
+	
 	public File selecionarArquivoPDF() {
+		
 		fileChooserSelArquivo = new FileChooser();
 		fileChooserSelArquivo.getExtensionFilters().add(new FileChooser.ExtensionFilter("PDF", "*.pdf"));
-		
-		arquivoPDFSelecionado = fileChooserSelArquivo.showOpenDialog(window);
+				
+		if (arquivoPDFSelecionado != null) {
+			fileChooserSelArquivo.setInitialDirectory(arquivoPDFSelecionado.getParentFile());
+		}
 
+		arquivoPDFSelecionado = fileChooserSelArquivo.showOpenDialog(window);
+		
 		if (arquivoPDFSelecionado == null) {
 			mensagem.mensagemAlerta();
 			return null;
@@ -30,9 +41,14 @@ public class SelecaoArquivo {
 	}
 	
 	public File selecionarArquivoCifrado() {
+		
 		fileChooserSelArquivo = new FileChooser();
 		fileChooserSelArquivo.getExtensionFilters().add(new FileChooser.ExtensionFilter("IFC", "*.ifc"));
-
+		
+		if (arquivoCifrado != null) {
+			fileChooserSelArquivo.setInitialDirectory(arquivoCifrado.getParentFile());
+		}
+		
 		arquivoCifrado = fileChooserSelArquivo.showOpenDialog(window);
 
 		if (arquivoCifrado == null) {
@@ -44,13 +60,18 @@ public class SelecaoArquivo {
 	}
 
 	public File selecionarChavePub() {
+		
 		fileChooserSelArquivo = new FileChooser();
 		fileChooserSelArquivo.getExtensionFilters().add(new ExtensionFilter("PUBK", "*.pubk"));
 		
-		if(arquivoChavePriv != null) {
+		if (arquivoChavePub != null) {
+			fileChooserSelArquivo.setInitialDirectory(arquivoChavePub.getParentFile());
+		}
+		
+		else if (arquivoChavePriv != null) {
 			fileChooserSelArquivo.setInitialDirectory(arquivoChavePriv.getParentFile());
 		}
-
+		
 		arquivoChavePub = fileChooserSelArquivo.showOpenDialog(window);
 
 		if (arquivoChavePub == null) {
@@ -62,13 +83,18 @@ public class SelecaoArquivo {
 	}
 	
 	public File selecionarChavePriv() {
+		
 		fileChooserSelArquivo = new FileChooser();
 		fileChooserSelArquivo.getExtensionFilters().add(new ExtensionFilter("PRIVK", "*.privk"));
 		
-		if(arquivoChavePub != null) {
-			fileChooserSelArquivo.setInitialDirectory(arquivoChavePub.getParentFile());
+		if (arquivoChavePriv != null) {
+			fileChooserSelArquivo.setInitialDirectory(arquivoChavePriv.getParentFile());
 		}
 
+		else if (arquivoChavePub != null) {
+			fileChooserSelArquivo.setInitialDirectory(arquivoChavePub.getParentFile());
+		}
+		
 		arquivoChavePriv = fileChooserSelArquivo.showOpenDialog(window);
 
 		if (arquivoChavePriv == null) {
@@ -80,39 +106,56 @@ public class SelecaoArquivo {
 	}
 
 	public File selecionarLocalSalvarArquivoCifrado() {
+		
 		fileChooserSaveArquivo = new FileChooser();
 		fileChooserSaveArquivo.getExtensionFilters().add(new FileChooser.ExtensionFilter("IFC", "*.ifc"));
 		
-		if(arquivoPDFSelecionado != null) {
+		if (arquivoPDFSelecionado != null) {
 			fileChooserSaveArquivo.setInitialDirectory(arquivoPDFSelecionado.getParentFile());
 		}
 
 		arquivoSalvarDocCifrado = fileChooserSaveArquivo.showSaveDialog(window);
+		
+		if (arquivoSalvarDocCifrado == null) {
+			mensagem.mensagemAlerta();
+			return null;
+		}
 
 		return arquivoSalvarDocCifrado;
 	}
 	
 	public File selecionarLocalSalvarArquivoDecifrado() {
+		
 		fileChooserSaveArquivo = new FileChooser();
 		fileChooserSaveArquivo.getExtensionFilters().add(new FileChooser.ExtensionFilter("PDF", "*.pdf"));
 		
-		if(arquivoCifrado != null) {
+		if (arquivoCifrado != null) {
 			fileChooserSaveArquivo.setInitialDirectory(arquivoCifrado.getParentFile());
 		}
 
 		arquivoSalvarDocDecifrado = fileChooserSaveArquivo.showSaveDialog(window);
+		
+		if (arquivoSalvarDocDecifrado == null) {
+			mensagem.mensagemAlerta();
+			return null;
+		}
 
 		return arquivoSalvarDocDecifrado;
 	}
 	
 	public File selecionarLocalSalvarChavePubRSA() {
+		
 		fileChooserSaveArquivo = new FileChooser();
 		fileChooserSaveArquivo.getExtensionFilters().add(new ExtensionFilter("PUBK", "*.pubk"));
 		
-		if(arquivoSalvarChavePriv != null) {
-			fileChooserSaveArquivo.setInitialDirectory(arquivoSalvarChavePriv.getParentFile());
+		if (arquivoSalvarChavePub != null) {
+			fileChooserSaveArquivo.setInitialDirectory(arquivoSalvarChavePub.getParentFile());
 		}
 
+		else if (arquivoSalvarChavePriv != null) {
+			fileChooserSaveArquivo.setInitialDirectory(arquivoSalvarChavePriv.getParentFile());
+		}
+		
 		arquivoSalvarChavePub = fileChooserSaveArquivo.showSaveDialog(window);
 
 		if (arquivoSalvarChavePub == null) {
@@ -124,13 +167,18 @@ public class SelecaoArquivo {
 	}
 	
 	public File selecionarLocalSalvarChavePrivRSA() {
+		
 		fileChooserSaveArquivo = new FileChooser();
 		fileChooserSaveArquivo.getExtensionFilters().add(new ExtensionFilter("PRIVK", "*.privk"));
 		
-		if(arquivoSalvarChavePub != null) {
-			fileChooserSaveArquivo.setInitialDirectory(arquivoSalvarChavePub.getParentFile());
+		if (arquivoSalvarChavePriv != null) {
+			fileChooserSaveArquivo.setInitialDirectory(arquivoSalvarChavePriv.getParentFile());
 		}
 
+		else if (arquivoSalvarChavePub != null) {
+			fileChooserSaveArquivo.setInitialDirectory(arquivoSalvarChavePub.getParentFile());
+		}
+		
 		arquivoSalvarChavePriv = fileChooserSaveArquivo.showSaveDialog(window);
 
 		if (arquivoSalvarChavePriv == null) {
