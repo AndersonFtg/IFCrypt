@@ -11,7 +11,7 @@ public class MensagemAoUsuario {
 	public void mensagemErro() {
 
 		alert = new Alert(AlertType.ERROR);
-		alert.setGraphic(new ImageView(this.getClass().getResource("../../images/error.png").toString()));
+		alert.setGraphic(new ImageView(this.getClass().getResource("/images/error.png").toExternalForm()));
 		alert.setTitle("Erro");
 		alert.setHeaderText("Campos Vazios");
 		alert.setContentText("Preencha todos os campos para continuar.");
@@ -21,7 +21,7 @@ public class MensagemAoUsuario {
 	public void mensagemErroFinal(String texto) {
 		
 		alert = new Alert(AlertType.ERROR);
-		alert.setGraphic(new ImageView(this.getClass().getResource("../../images/cript_falha.png").toString()));
+		alert.setGraphic(new ImageView(this.getClass().getResource("/images/cript_falha.png").toExternalForm()));
 		alert.setTitle("Erro");
 		alert.setHeaderText("Falha");
 		alert.setContentText("Ocorreu um errro ao tentar " + texto + " o arquivo. Verifique os arquivos escolhidos.");
@@ -31,7 +31,7 @@ public class MensagemAoUsuario {
 	public void mensagemSucesso(String texto) {
 		
 		alert = new Alert(AlertType.INFORMATION);
-		alert.setGraphic(new ImageView(this.getClass().getResource("../../images/cript_sucesso.png").toString()));
+		alert.setGraphic(new ImageView(this.getClass().getResource("/images/cript_sucesso.png").toExternalForm()));
 		alert.setTitle("Sucesso");
 		alert.setHeaderText("Sucesso");
 		alert.setContentText("Arquivo " + texto + " com sucesso!");
@@ -41,7 +41,7 @@ public class MensagemAoUsuario {
 	public void mensagemAlerta() {
 
 		alert = new Alert(AlertType.WARNING);
-		alert.setGraphic(new ImageView(this.getClass().getResource("../../images/warning.png").toString()));
+		alert.setGraphic(new ImageView(this.getClass().getResource("/images/warning.png").toExternalForm()));
 		alert.setTitle("Atenção");
 		alert.setHeaderText("Nenhum Arquivo Selecionado");
 		alert.setContentText("Por favor, selecione um arquivo para continuar.");
@@ -51,7 +51,7 @@ public class MensagemAoUsuario {
 	public void mensagemAssinaturaInvalida() {
 		
 		alert = new Alert(AlertType.ERROR);
-		alert.setGraphic(new ImageView(this.getClass().getResource("../../images/error.png").toString()));
+		alert.setGraphic(new ImageView(this.getClass().getResource("/images/error.png").toExternalForm()));
 		alert.setTitle("Erro");
 		alert.setHeaderText("Assinatura");
 		alert.setContentText("Assinatura Inválida. Podem ter ocorrido modificações no documento ou pode ter sido corrompido.");
@@ -61,7 +61,7 @@ public class MensagemAoUsuario {
 	public void mensagemErroValidarAssinatura() {
 		
 		alert = new Alert(AlertType.ERROR);
-		alert.setGraphic(new ImageView(this.getClass().getResource("../../images/error.png").toString()));
+		alert.setGraphic(new ImageView(this.getClass().getResource("/images/error.png").toExternalForm()));
 		alert.setTitle("Erro");
 		alert.setHeaderText("Assinatura");
 		alert.setContentText("Ocorreu um erro ao validar a assinatura do arquivo. Favor verificar os arquivos escolhidos.");
@@ -71,7 +71,7 @@ public class MensagemAoUsuario {
 	public void mensagemChaveSucesso() {
 		
 		alert = new Alert(AlertType.INFORMATION);
-		alert.setGraphic(new ImageView(this.getClass().getResource("../../images/success.png").toString()));
+		alert.setGraphic(new ImageView(this.getClass().getResource("/images/success.png").toExternalForm()));
 		alert.setTitle("Sucesso");
 		alert.setHeaderText("Chaves RSA");
 		alert.setContentText("Chaves RSA Geradas com Sucesso.");
@@ -81,7 +81,7 @@ public class MensagemAoUsuario {
 	public void mensagemChaveErro() {
 		
 		alert = new Alert(AlertType.ERROR);
-		alert.setGraphic(new ImageView(this.getClass().getResource("../../images/error.png").toString()));
+		alert.setGraphic(new ImageView(this.getClass().getResource("/images/error.png").toExternalForm()));
 		alert.setTitle("Erro");
 		alert.setHeaderText("Chaves RSA");
 		alert.setContentText("Ocorreu um erro ao salvar as chaves. Verifique os campos preenchidos e tente novamente.");
@@ -91,7 +91,7 @@ public class MensagemAoUsuario {
 	public void mensagemProcessamento() {
 		
 		alert = new Alert(AlertType.WARNING);
-		alert.setGraphic(new ImageView(this.getClass().getResource("../../images/warning.png").toString()));
+		alert.setGraphic(new ImageView(this.getClass().getResource("/images/warning.png").toExternalForm()));
 		alert.setTitle("Atenção");
 		alert.setHeaderText("Procesamento");
 		alert.setContentText("O mesmo arquivo não poderá ser descriptografado novamente.");
