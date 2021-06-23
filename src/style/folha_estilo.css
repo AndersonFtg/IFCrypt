@@ -2,7 +2,6 @@
 	 -fx-background-image: url(../images/lupa.png); 
 	 -fx-background-color: transparent; 
 	 -fx-background-repeat: no-repeat;
-	 -fx-cursor: hand;
 }
 
 .button-prin{
@@ -12,7 +11,6 @@
 	-fx-border-radius: 5px;
 	-fx-border-width: 2px;
 	-fx-font-size: 12px;
-	-fx-cursor: hand;
 }
 
 .button-info{
@@ -20,6 +18,10 @@
 	-fx-background-color: transparent; 
 	-fx-background-repeat: no-repeat;
 	-fx-background-position: 50.0% 
+}
+
+.button{
+	-fx-cursor: hand;
 }
 
 #imgView{
