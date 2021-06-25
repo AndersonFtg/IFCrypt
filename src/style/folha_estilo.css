@@ -1,5 +1,5 @@
 .button-search{
-	 -fx-background-image: url(../images/lupa.png); 
+	 -fx-background-image: url(/images/lupa.png); 
 	 -fx-background-color: transparent; 
 	 -fx-background-repeat: no-repeat;
 }
@@ -14,7 +14,7 @@
 }
 
 .button-info{
-	-fx-background-image: url(../images/info.png);
+	-fx-background-image: url(/images/info.png);
 	-fx-background-color: transparent; 
 	-fx-background-repeat: no-repeat;
 	-fx-background-position: 50.0% 
@@ -25,7 +25,7 @@
 }
 
 #imgView{
-	-fx-image: url(../images/logo_ifsp_horizontal_transp.png);
+	-fx-image: url(/images/logo_ifsp_horizontal_transp.png);
 }
 
 #paneTop{
