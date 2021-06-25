@@ -4,15 +4,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="520.0" prefWidth="620.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171">
+<AnchorPane prefHeight="520.0" prefWidth="620.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label layoutX="83.0" layoutY="179.0" text="Bem Vindo ao IFCRYPT">
+      <Label layoutX="94.0" layoutY="194.0" text="Bem Vindo ao IFCrypt">
          <font>
             <Font size="45.0" />
          </font>
       </Label>
-      <Label layoutX="85.0" layoutY="260.0" text="Sua ferramenta para criptografar seus arquivos PDF">
+      <Label layoutX="81.0" layoutY="260.0" text="Sua ferramenta para criptografar seus arquivos PDF!">
          <font>
             <Font size="20.0" />
          </font>
