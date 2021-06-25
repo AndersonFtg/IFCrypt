@@ -32,9 +32,7 @@ public class AssinaturaDigital {
 		assinatura.initSign(chavePrivada);
 		assinatura.update(arquivoSemAssinatura);
 		
-		byte[] assinaturaB = assinatura.sign();
-		
-		return assinaturaB;
+		return assinatura.sign();
 	}
 
 	public boolean validarAssinatura(byte[] arquivoComAssinatura, PublicKey chavePublica) throws InvalidKeyException, SignatureException, NoSuchAlgorithmException, InvalidKeySpecException, FileNotFoundException, IOException {
