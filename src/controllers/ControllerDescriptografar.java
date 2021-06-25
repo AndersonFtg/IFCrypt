@@ -105,7 +105,7 @@ public class ControllerDescriptografar implements Initializable {
 				else {
 					try {	
 						if (descriptArquivo.descriptografar(docCriptografado, localSalvarDocDescriptografado, docChavePrivDestino)) {
-							mensagem.mensagemSucesso("descriptografado", "Descriptografia");
+							mensagem.mensagemSucesso("descriptografado", "Descriptografado");
 							limpaTxts();
 							btnDecriptDoc.setDisable(false);
 						}
