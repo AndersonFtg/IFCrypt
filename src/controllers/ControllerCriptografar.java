@@ -88,7 +88,7 @@ public class ControllerCriptografar implements Initializable {
 					criptArquivo = new CriptografarArquivo();
 	
 					if (criptArquivo.criptografar(docEscolhido, localSalvarDocCriptografado, docChavePubDestino, docChavePrivRemetente)) {
-						mensagem.mensagemSucesso("criptografado");
+						mensagem.mensagemSucesso("criptografado", "Criptografia");
 						limpaTxts();
 						btnCriptDoc.setDisable(false);
 					}
