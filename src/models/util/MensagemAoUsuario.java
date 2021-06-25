@@ -28,12 +28,12 @@ public class MensagemAoUsuario {
 		alert.showAndWait();
 	}
 
-	public void mensagemSucesso(String texto) {
+	public void mensagemSucesso(String texto, String header) {
 		
 		alert = new Alert(AlertType.INFORMATION);
 		alert.setGraphic(new ImageView(this.getClass().getResource("/images/cript_sucesso.png").toExternalForm()));
 		alert.setTitle("Sucesso");
-		alert.setHeaderText("Sucesso");
+		alert.setHeaderText(header);
 		alert.setContentText("Arquivo " + texto + " com sucesso!");
 		alert.showAndWait();
 	}
@@ -53,8 +53,8 @@ public class MensagemAoUsuario {
 		alert = new Alert(AlertType.ERROR);
 		alert.setGraphic(new ImageView(this.getClass().getResource("/images/error.png").toExternalForm()));
 		alert.setTitle("Erro");
-		alert.setHeaderText("Assinatura");
-		alert.setContentText("Assinatura Inválida. Podem ter ocorrido modificações no documento ou pode ter sido corrompido.");
+		alert.setHeaderText("Assinatura Digital");
+		alert.setContentText("Assinatura digital inválida. Podem ter ocorrido modificações no documento ou pode ter sido corrompido.");
 		alert.showAndWait();
 	}
 	
@@ -63,8 +63,8 @@ public class MensagemAoUsuario {
 		alert = new Alert(AlertType.ERROR);
 		alert.setGraphic(new ImageView(this.getClass().getResource("/images/error.png").toExternalForm()));
 		alert.setTitle("Erro");
-		alert.setHeaderText("Assinatura");
-		alert.setContentText("Ocorreu um erro ao validar a assinatura do arquivo. Favor verificar os arquivos escolhidos.");
+		alert.setHeaderText("Assinatura Digital");
+		alert.setContentText("Ocorreu um erro ao validar a assinatura digtial do arquivo. Favor verificar os arquivos escolhidos.");
 		alert.showAndWait();
 	}
 	
@@ -73,8 +73,8 @@ public class MensagemAoUsuario {
 		alert = new Alert(AlertType.INFORMATION);
 		alert.setGraphic(new ImageView(this.getClass().getResource("/images/success.png").toExternalForm()));
 		alert.setTitle("Sucesso");
-		alert.setHeaderText("Chaves RSA");
-		alert.setContentText("Chaves RSA Geradas com Sucesso.");
+		alert.setHeaderText("Chaves Criptográficas");
+		alert.setContentText("Chaves criptográficas geradas com sucesso!");
 		alert.showAndWait();
 	}
 	
@@ -83,7 +83,7 @@ public class MensagemAoUsuario {
 		alert = new Alert(AlertType.ERROR);
 		alert.setGraphic(new ImageView(this.getClass().getResource("/images/error.png").toExternalForm()));
 		alert.setTitle("Erro");
-		alert.setHeaderText("Chaves RSA");
+		alert.setHeaderText("Chaves Criptográficas");
 		alert.setContentText("Ocorreu um erro ao salvar as chaves. Verifique os campos preenchidos e tente novamente.");
 		alert.showAndWait();
 	}
