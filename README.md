@@ -2,11 +2,11 @@
 
 O IFCrypt foi desenvolvido como parte do Trabalho de Conclusão de Curso (TCC) do curso de Tecnologia em Análise e Desenvolvimento de Sistemas do Instituo Federal de São Paulo (IFSP) – Campus Campinas para a obtenção do título de Tecnólogo em Análise e Desenvolvimento de Sistemas.
 
-O IFCrypt é um software para criptografar e descriptografar arquivos em formato PDF utilizando o processo de envelopamento digital, além de gerar uma assinatura digital para o documento.
+O IFCrypt é um software para criptografar e descriptografar arquivos em formato PDF utilizando o processo de envelopamento digital, além de gerar uma assinatura digital para o documento, permitindo que sejam enviados, pela internet, de forma a garantir a confidencialidade, integridade, autenticidade e o não-repudio.
 
-O software funciona da seguinte forma: o usuário ao iniciar a aplicação precisa gerar um par de chaves RSA caso ainda não possua, em seguida ele seleciona a função de criptografar que recebe como entrada um arquivo e duas chaves, a chave pública do destinatário e a chave privada do remetente. O arquivo é cifrado com uma chave de sessão simétrica AES, que por sua vez, é cifrada com a chave pública do destinatário. Após isso, gera-se um hash do arquivo mais a chave, ambos cifrados, que é cifrado com a chave privada do remetente formando a assinatura digital. A função de descriptografar realiza o processo inverso, verificando a validade da assinatura digital e decifrando o arquivo.
+O software funciona da seguinte forma: o usuário ao iniciar a aplicação precisa gerar um par de chaves RSA caso ainda não possua, em seguida seleciona-se a função Criptografar ou Descriptografar. A função Criptografar recebe como entrada um arquivo e duas chaves, a chave pública do destinatário e a chave privada do remetente. O arquivo é cifrado com uma chave de sessão simétrica AES, que por sua vez, é cifrada com a chave pública do destinatário. Após isso, gera-se um hash do arquivo mais a chave, ambos cifrados, que é cifrado com a chave privada do remetente formando a assinatura digital. A função Descriptografar realiza o processo inverso, verificando a validade da assinatura digital e decifrando o arquivo.
 
-Os manuais de utilização estão disponíveis como: “**IFCrypt – Manual do Usuário**” e “**IFCrypt – Em execução**” que mostra, em vídeo, o sistema sendo executado.
+O arquivo **IFCrypt.jar** é o executável do software pronto para ser usado. Os manuais de utilização estão disponíveis como: **IFCrypt – Manual do Usuário.pdf** e **IFCrypt – Em execução.wmv* que mostra, em vídeo, o sistema sendo executado.
 
 A execução do código pode ser feita pela IDE Eclipse. É necessário criar um projeto e importar as classes do pacote **src** e após isso o código pode ser modificado e a aplicação executada.
 
