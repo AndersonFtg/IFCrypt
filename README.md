@@ -6,7 +6,7 @@ O IFCrypt é um software para criptografar e descriptografar arquivos em formato
 
 O software funciona da seguinte forma: o usuário ao iniciar a aplicação precisa gerar um par de chaves RSA caso ainda não possua, em seguida seleciona-se a função Criptografar ou Descriptografar. A função Criptografar recebe como entrada um arquivo e duas chaves, a chave pública do destinatário e a chave privada do remetente. O arquivo é cifrado com uma chave de sessão simétrica AES, que por sua vez, é cifrada com a chave pública do destinatário. Após isso, gera-se um hash do arquivo mais a chave, ambos cifrados, que é cifrado com a chave privada do remetente formando a assinatura digital. A função Descriptografar realiza o processo inverso, verificando a validade da assinatura digital e decifrando o arquivo.
 
-O arquivo **IFCrypt.jar** é o executável do software pronto para ser usado. Os manuais de utilização estão disponíveis como: **IFCrypt – Manual do Usuário.pdf** e **IFCrypt – Em execução.wmv* que mostra, em vídeo, o sistema sendo executado.
+O arquivo **IFCrypt.jar** é o executável do software pronto para ser usado. Os manuais de utilização estão disponíveis como: **IFCrypt – Manual do Usuário.pdf** e **IFCrypt – Em Execução.wmv** que mostra, em vídeo, o sistema sendo executado.
 
 A execução do código pode ser feita pela IDE Eclipse. É necessário criar um projeto e importar as classes do pacote **src** e após isso o código pode ser modificado e a aplicação executada.
 
